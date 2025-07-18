@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorGuessr</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game">
+        <div class="wrapper">
+            <div class="color-half" id="colorHalf">
+                <span class="color-label" id="labelColorReal"></span>
+            </div>
+            <div class="white-half" id="whiteHalf">
+                <span class="color-label" id="labelColorUser"></span>
+                <div class="controls" id="controls">
+                    <input type="text" id="guessInput" placeholder="#RRGGBB"  autocomplete="off" />
+                    <button class="button" id="guessButton"><span class="button-inside">Guess</span></button>
+                </div>
+            </div>
+        </div>
+        <button id="playAgainCenter" class="button play-again-center hidden"><span class="button-inside">Volver a Jugar</span></button>
+    </div>
+    <div id="overlay" class="overlay hidden">
+        <div class="message-box" id="messageBox">
+            <p>Color real: <span id="realColor">#------</span></p>
+            <p>Tu elección: <span id="userColor">#------</span></p>
+            <hr />
+            <div class="score">
+                <div class="box-color-name red"><p>RED</p><div class="separator"></div><div class="score-color"><span id="scoreRed">---</span></div></div>
+                <div class="box-color-name green"><p>GREEN</p><div class="separator"></div><div class="score-color"><span id="scoreGreen">---</span></div></div>
+                <div class="box-color-name blue"><p>BLUE</p><div class="separator"></div><div class="score-color"><span id="scoreBlue">---</span></div></div>
+                <div class="separator"></div>
+                <div class="box-total"><p>TOTAL</p><div class="separator"></div><div class="score-color"><span id="scoreTotal">---</span></div></div>
+                <div class="buttons">
+                    <div class="button-wrapper">
+                        <button class="button" id="playAgainButton">
+                        <span class="button-inside">Volver a Jugar</span>
+                        </button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button" id="seeColorsButton">
+                        <span class="button-inside">Ver Colores</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="errorMessage" class="error-message hidden">Error de validación</div>
+</body>
+</html>
