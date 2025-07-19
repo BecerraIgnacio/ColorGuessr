@@ -25,7 +25,7 @@ body {
 
 .button {
     align-items: center;
-    background-image: linear-gradient(144deg,#f03929, #f07f29 14%, #f0ec16 28%, #48c40e 43%, #07ebd4 57%, #2809ed 84%,#ae07ba);
+    background-image: linear-gradient(144deg,#f03929, #f07f29 14%, #f0ec16 29%, #48c40e 44%, #07ebd4 58%, #2809ed 84%,#ae07ba);
     border: 0;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -34,6 +34,7 @@ body {
     display: flex;
     font-family: var(--font-main);
     font-size: 1rem;
+    font-weight: 600;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
@@ -45,7 +46,7 @@ body {
     touch-action: manipulation;
     white-space: nowrap;
     cursor: pointer;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .button:active,
@@ -129,14 +130,12 @@ body {
     border-radius: var(--btn-radius);
     box-shadow: var(--shadow);
     border: var(--border-style);
+    transition: 300ms;
 }
 
 #guessButton {
-    letter-spacing: 4px;
-    cursor: pointer;
     width: 50%;
     margin: auto;
-    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -213,6 +212,7 @@ body {
 .score-color {
     width: 60px;
     text-align: right;
+    font-weight: 600;
 }
 
 /* Separador */
@@ -224,13 +224,13 @@ body {
 
 /* Colores específicos para nombres */
 .red p {
-    color: red;
+    color: #f00;
 }
 .green p {
-    color: green;
+    color: #0f0;
 }
 .blue p {
-    color: blue;
+    color: #00f;
 }
 
 
@@ -241,7 +241,7 @@ body {
     font-weight: 100;
     letter-spacing: 1px;
     font-size: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: #fff7;
     padding: 10px 15px;
     border-radius: var(--btn-radius);
     color: #000;
@@ -258,9 +258,9 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     margin: auto;
-    font-weight: 100;
     text-transform: uppercase;
 }
+
 
 .buttons {
     display: flex;
@@ -284,13 +284,13 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-error);
-    color: white;
+    color: var(--color-text-invert);
     padding: 10px 20px;
     border-radius: 6px;
     font-size: 1rem;
     box-shadow: var(--shadow);
     z-index: 2000;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
 }
 
 .hidden {
